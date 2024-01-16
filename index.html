@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="jquery.min.js"></script>
+    <style type="text/css">
+    	*{
+    		overflow: hidden;
+    	}
+    	body, html{
+    		background: black;
+    		margin: 0;
+    		width: 100%;
+    		height: 100%;
+    		overflow: hidden;
+    	}
+        .textbox{
+    position: absolute;
+    background-image: url(text-12.png);
+    background-size: 100%;
+    background-position: left 0px;
+    left:0%;
+    top: 0%;
+    		width: 100%;
+    		height: 100%;
+    		overflow: hidden;
+    filter: invert(1);
+    background-repeat: repeat-y;
+}
+    </style>
+	<script type="text/javascript">
+		var textbox_counter = 0
+function text_count_interval(){
+		textbox_counter++
+		$('.textbox').css({'background-position':'left '+(-1*textbox_counter/5)+'px'})
+}
+$(document).ready(function(){
+
+setInterval(text_count_interval, 10);
+})</script>
+</head>
+<body>
+<div id="textboxWrap">
+	<div class="textbox"></div>
+</div>
+
+</body>
+</html>
